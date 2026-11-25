@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>XL Launcher</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">XL</div><div><b>XL LAUNCHER</b><small>FABRIC EDITION</small></div></div>
+    <div class="nav active">⌂　 Início</div>
+    <div class="nav" id="settingsNav">⚙　 Configurações</div>
+    <div class="sidebottom">MINECRAFT JAVA<br><span>1.21.11 · FABRIC</span></div>
+  </aside>
+  <main>
+    <header><span>SEU MINECRAFT, DO SEU JEITO.</span><span class="version">XL CLIENT / 1.0.0</span></header>
+    <section id="home" class="view">
+      <div class="hero">
+        <div class="eyebrow">PERSONAL CLIENT</div>
+        <h1>XL <span>CLIENT</span></h1>
+        <p>Uma experiência limpa. Sem excesso. Só entrar e jogar.</p>
+        <div class="tags"><span>JAVA 1.21.11</span><span>FABRIC</span><span>PRETO & BRANCO</span></div>
+        <button id="play" class="play"><span>▶</span> JOGAR</button>
+        <div id="status" class="status">Configure o Prism Launcher para iniciar sua instância.</div>
+      </div>
+      <div class="quick">
+        <button id="mods">ABRIR PASTA DE MODS ↗</button>
+        <button id="mcFolder">PASTA .MINECRAFT ↗</button>
+      </div>
+      <div class="foot">XL CLIENT <span>FEITO PARA JOGAR</span></div>
+    </section>
+    <section id="settings" class="view hidden">
+      <div class="settingsHead"><div class="eyebrow">PREFERÊNCIAS</div><h2>Configurações</h2><p>Conecte o Prism Launcher e escolha sua instância.</p></div>
+      <label>CAMINHO DO PRISM LAUNCHER</label>
+      <div class="pathrow"><input id="prismPath" placeholder="Selecione prism-launcher.exe"><button id="browse">PROCURAR</button></div>
+      <label>NOME DA INSTÂNCIA NO PRISM</label>
+      <input id="instance" placeholder="XL Client">
+      <div class="hint">O nome deve ser exatamente igual ao nome da instância criada no Prism Launcher.</div>
+      <label>TIPO DE CONTA</label>
+      <select id="accountMode">
+        <option value="microsoft">Conta Microsoft</option>
+        <option value="offline">Conta offline (apelido)</option>
+      </select>
+      <div id="offlineFields" class="hidden">
+        <label>APELIDO OFFLINE</label>
+        <input id="offlineName" maxlength="16" placeholder="SeuNome">
+        <div class="hint">Use de 3 a 16 caracteres: letras, números ou underline (_). Funciona em mundos locais e servidores que aceitam modo offline.</div>
+      </div>
+      <label>MEMÓRIA RAM (APENAS REFERÊNCIA)</label>
+      <select id="ram"><option value="2">2 GB</option><option value="4">4 GB</option><option value="6">6 GB</option><option value="8">8 GB</option><option value="10">10 GB</option><option value="12">12 GB</option></select>
+      <div class="hint">A RAM é ajustada nas configurações da própria instância do Prism. Este campo serve como lembrete e não altera a instância automaticamente.</div>
+      <button id="save" class="save">SALVAR CONFIGURAÇÕES</button>
+      <div id="saved" class="status"></div>
+    </section>
+  </main>
+</div>
+<script src="renderer.js"></script>
+</body></html>
